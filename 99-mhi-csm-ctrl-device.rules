@@ -1,0 +1,2 @@
+SUBSYSTEM=="mhi", ACTION=="add", KERNEL=="mhi[0-9]*_CSM_CTRL", TAG+="systemd", ENV{SYSTEMD_WANTS}+="csm-nbdkit@%k.service csm-configure-ip@%k.service"
+SUBSYSTEM=="mhi", ACTION=="add", KERNEL=="mhi[0-9]", TAG+="systemd", ENV{SYSTEMD_WANTS}+="csm-store-ddr@%k.service"
